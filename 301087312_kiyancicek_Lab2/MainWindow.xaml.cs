@@ -8,7 +8,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
+using System.Windows.Controls;  
 using Amazon.Runtime;
 using _301087312_kiyancicek_Lab2.Models;
 using Table = Amazon.DynamoDBv2.DocumentModel.Table;
@@ -207,7 +207,7 @@ namespace _301087312_kiyancicek_Lab2
         }
         private void textsing()
         {
-            wrong.Content = "User Was Added Please Login";
+            wrong.Content = "User Added. Please Login";
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)

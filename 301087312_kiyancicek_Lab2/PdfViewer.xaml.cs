@@ -1,17 +1,39 @@
 ﻿using Amazon.DynamoDBv2;
 using Amazon.DynamoDBv2.DataModel;
 using Amazon.DynamoDBv2.DocumentModel;
+using Amazon.DynamoDBv2.Model;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using Amazon;
 using Amazon.Runtime;
+using System.Data;
+using System.Drawing;
 using Table = Amazon.DynamoDBv2.DocumentModel.Table;
 using Microsoft.Extensions.Configuration;
 using System.IO;
+using Syncfusion.Windows.PdfViewer;
 using Amazon.S3;
 using Amazon.S3.Model;
 
+
 namespace _301087312_kiyancicek_Lab2
 {
+    /// <summary>
+    /// Interaction logic for PdfViewer.xaml
+    /// </summary>
     public partial class PdfViewer : Window
     {
         string userEmail;
@@ -142,7 +164,7 @@ namespace _301087312_kiyancicek_Lab2
             AmazonS3Client client = new AmazonS3Client(accessKeyID, secretKey);
 
             GetObjectRequest request = new GetObjectRequest();
-            request.BucketName = "ali001bucket1";
+            request.BucketName = "ali001bucket2";
             request.Key = "BeginningServerlessComputing.pdf";
             GetObjectResponse response = client.GetObjectAsync(request).Result;
 
@@ -161,7 +183,7 @@ namespace _301087312_kiyancicek_Lab2
             AmazonS3Client client = new AmazonS3Client(accessKeyID, secretKey);
 
             GetObjectRequest request = new GetObjectRequest();
-            request.BucketName = "ali001bucket1";
+            request.BucketName = "ali001bucket2";
             request.Key = "AWSCertifiedSolutions.pdf";
             GetObjectResponse response = client.GetObjectAsync(request).Result;
 
@@ -180,7 +202,7 @@ namespace _301087312_kiyancicek_Lab2
             AmazonS3Client client = new AmazonS3Client(accessKeyID, secretKey);
 
             GetObjectRequest request = new GetObjectRequest();
-            request.BucketName = "ali001bucket1";
+            request.BucketName = "ali001bucket2";
             request.Key = "Docker.pdf";
             GetObjectResponse response = client.GetObjectAsync(request).Result;
 

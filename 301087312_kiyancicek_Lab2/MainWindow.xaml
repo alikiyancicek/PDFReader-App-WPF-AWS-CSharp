@@ -10,12 +10,21 @@
         <Label Content="User Email : " HorizontalAlignment="Left" Margin="162,91,0,0" VerticalAlignment="Top" Height="38" Width="131" FontSize="20" Foreground="Black" FontWeight="Bold" />
         <Label Content="Password : " HorizontalAlignment="Left" Margin="165,164,0,0" VerticalAlignment="Top" Height="38" Width="131" FontSize="20" Foreground="Black"  FontWeight="Bold"/>
         <TextBox x:Name="TEmail" HorizontalAlignment="Left" Height="38" Margin="351,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="334" TextChanged="TEmail_TextChanged" FontSize="18" BorderBrush="#FF3D00FF" FontWeight="Bold"/>
-        <Label  Content="Welcome to ALI's Book Reader" HorizontalAlignment="Left" Height="50" Margin="228,35,0,0" VerticalAlignment="Top" Width="369"  Foreground="Red" FontSize="24"  FontWeight="Bold"/>
+        <Label  Content="E-Book Reader" HorizontalAlignment="Left" Height="50" Margin="323,26,0,0" VerticalAlignment="Top" Width="191"  Foreground="Red" FontSize="24"  FontWeight="Bold" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleY="-0.417"/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-1.344"/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
         <Label  x:Name="wrong" HorizontalAlignment="Left" Height="50" Margin="347,215,0,0" VerticalAlignment="Top" Width="369"  Foreground="Red" FontSize="18"  FontWeight="Bold"/>
         <PasswordBox x:Name="TPassword" HorizontalAlignment="Left" Height="38" Margin="354,168,0,0" VerticalAlignment="Top" Width="336" FontSize="14"/>
         <Button x:Name="BtnLogin" Content="Login" HorizontalAlignment="Left" Margin="174,284,0,0" VerticalAlignment="Top" Width="152" Height="49" Background="#FF62ACF9" FontWeight="Bold" FontSize="18" Foreground="#FFE8FF00" Click="BtnLogin_Click"/>
         <Button x:Name="BtnSignup" Content="Sign Up" HorizontalAlignment="Left" Margin="541,284,0,0" VerticalAlignment="Top" Width="152" Height="49" Background="#FF62ACF9" FontWeight="Bold" FontSize="18" Foreground="#FFE8FF00" Click="BtnSignup_Click"/>
         <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="368,355,0,0" VerticalAlignment="Top" Width="117" Height="51" Background="red" FontWeight="Bold" FontSize="14" Foreground="#FFE8FF00" Click="Exit_Click" />
     </Grid>
-    
+
 </Window>
